@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: center;
   font-size: 100px;
+  align-items: center;
 }
 
 .stop-and-reset-layout {
@@ -39,11 +40,48 @@ body {
   width: 250px;
 }
 
-.stop-and-reset-layout button {
+.stop-and-reset-layout button,
+.timer-layout button {
   padding: 20px 20px;
   color: rgb(233, 233, 233);
   border: 3px solid rgb(233, 233, 233);
   background-color: rgb(39, 39, 39);
   font-size: 20px;
   border-radius: 6px;
+}
+
+.stop-start-button {
+  width: 96px;
+}
+
+.timer-layout {
+  display: flex;
+  justify-content: center;
+}
+
+.secret-layout-change,
+.secret-question,
+.button-answer-yes,
+.button-answer-no {
+  color: white;
+  opacity: 0;
+  transition: opacity 2s;
+  width: 100px;
+}
+
+.secret-layout-change:hover {
+  opacity: 1;
+  transition: opacity 1s;
+
+}
+
+.secret-question:hover {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.button-answer-yes:hover,
+.button-answer-no:hover {
+  opacity: 1;
+  transition: opacity 3s;
 }

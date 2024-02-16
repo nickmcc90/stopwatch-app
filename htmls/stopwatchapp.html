@@ -8,15 +8,27 @@
 
     <div class="stopwatch-main-circle-layout">
       <div class="stopwatch-main-circle">
-        <div class="js-stopwatch-numbers stopwatch-numbers">66:00</div>
+        <div class="js-stopwatch-numbers stopwatch-numbers">
+          <div class="tens-minutes">0</div>
+          <div class="ones-minutes">0</div>
+          <div>:</div>
+          <div class="tens-seconds">7</div>
+          <div class="ones-seconds">0</div>
+        </div>
       </div>
     </div>
 
     <div class="stop-and-reset-layout">
-      <button>Stop</button>
+      <button class="stop-start-button js-stop-start-button">Start</button>
       <div class="stop-reset-spacer"></div>
-      <button>Reset</button>
+      <button class="js-reset-button">Reset</button>
     </div>
+
+    <div class="timer-layout">
+      <button>Timer</button>
+    </div>
+
+    <div class="container-secrets"></div>
 
 
 
