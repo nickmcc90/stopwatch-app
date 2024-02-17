@@ -85,3 +85,11 @@ body {
   opacity: 1;
   transition: opacity 3s;
 }
+
+/* This code below is trying to fix a bug: white specks appear by the numbers as they change, idk what it is */
+.tm,
+.om,
+.ts,
+.os {
+  background-color: rgb(39, 39, 39);
+}

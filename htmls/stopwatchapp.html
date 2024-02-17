@@ -1,3 +1,7 @@
+<!--The next step is to look at the your github notes and see how to make fixed elements with darkened
+background color pop ups again.-->
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,11 +13,11 @@
     <div class="stopwatch-main-circle-layout">
       <div class="stopwatch-main-circle">
         <div class="js-stopwatch-numbers stopwatch-numbers">
-          <div class="tens-minutes">0</div>
-          <div class="ones-minutes">0</div>
+          <div class="js-tens-minutes tm"></div>
+          <div class="js-ones-minutes om"></div>
           <div>:</div>
-          <div class="tens-seconds">7</div>
-          <div class="ones-seconds">0</div>
+          <div class="js-tens-seconds ts"></div>
+          <div class="js-ones-seconds os"></div>
         </div>
       </div>
     </div>
@@ -25,8 +29,10 @@
     </div>
 
     <div class="timer-layout">
-      <button>Timer</button>
+      <button class="js-timer-button">Timer</button>
     </div>
+
+    <div class="js-fixed-timer-select"></div>
 
     <div class="container-secrets"></div>
 
