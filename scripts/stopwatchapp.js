@@ -89,11 +89,11 @@ function reset() {
 function timerScreenSelect() {
   const selectScreenElement = document.querySelector('.js-fixed-timer-select');
   let htmlSelectScreen = `
-  <div>
+  <div class='darkened-screen'>
+    
   
   
-  
-  
+  </div>
   `;
 
   selectScreenElement.innerHTML = htmlSelectScreen;
