@@ -85,21 +85,19 @@ function reset() {
   console.log(time);    // debugger
 }
 
-
 function timerScreenSelect() {
   const selectScreenElement = document.querySelector('.js-fixed-timer-select');
   let htmlSelectScreen = `
   <div class='darkened-screen'>
-    
-  
-  
+    <div class='item-screen'>
+      <div class='prompt'>Select timer amount (under one hour, this is a beta)</div>
+      <div></div>
+    </div>
   </div>
   `;
 
   selectScreenElement.innerHTML = htmlSelectScreen;
-}
-
-
+  }
 
 function updateTime() {
   // time is going to be an object, made of 4 properties.
