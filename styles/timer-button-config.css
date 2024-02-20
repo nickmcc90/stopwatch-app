@@ -1,0 +1,39 @@
+.timer-screen-top {
+  height: 150px;
+  width: 500px;
+  background-color: lightgray;
+  border: 3px solid black;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-portion {
+  width: 505px;
+}
+
+.bottom-portion p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-portion button {
+  padding: 10px 30px;
+  background-color: lightgray;
+  color: black;
+  border: 2px solid black;
+  border-radius: 2px;
+  font-size: 15px;
+}
+
+.same-width {
+  width: 120px;
+}
