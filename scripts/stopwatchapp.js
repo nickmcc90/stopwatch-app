@@ -124,6 +124,7 @@ function timerScreenSelect() {
   `;
 
   selectScreenElement.innerHTML = htmlSelectScreen;
+  clearTimer();   // This is here to clear out the values put in last time someone used the timer.
   document.querySelectorAll('.js-button').forEach((numberButton, index) => {
     numberButton.addEventListener('click', () => {
       populateTimer(index);
