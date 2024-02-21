@@ -1,4 +1,5 @@
 console.log(4); // test
+console.log(10);
 
 let time = JSON.parse(localStorage.getItem('time')) || {
   onesSeconds: 0,
@@ -91,13 +92,52 @@ function timerScreenSelect() {
   <div class='darkened-screen'>
     <div class='item-screen'>
       <div class='prompt'>Select timer amount (under one hour, this is a beta)</div>
-      <div></div>
+      <div class="timer-container">
+        <div class="timer-screen-top">
+          <div class="js-tensmins">0</div>
+          <div class="js-onesmins">0</div>
+          <div>:</div>
+          <div class="js-tenssec">0</div>
+          <div class="js-onessec">0</div>
+        </div>
+        <div class="bottom-portion">
+          <p>
+            <button class="js-button">0</button>
+            <button class="js-button">1</button>
+            <button class="js-button">2</button>
+            <button class="js-button">3</button>
+            <button class="js-button">4</button>
+            <button class="same-width js-set-button">Set</button>
+          </p>
+          <p>
+            <button class="js-button">5</button>
+            <button class="js-button">6</button>
+            <button class="js-button">7</button>
+            <button class="js-button">8</button>
+            <button class="js-button">9</button>
+            <button class="same-width js-clear-button">Clear</button>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   `;
 
   selectScreenElement.innerHTML = htmlSelectScreen;
-  }
+  document.querySelectorAll('.js-button').forEach((numberButton, index) => {
+    numberButton.addEventListener('click', () => {
+      populateTimer(index);
+    })
+  })
+
+  document.querySelector('.js-set-button').addEventListener('click', () => {
+    setTimer();
+  })
+
+  document.querySelector('.js-clear-button').addEventListener('click', () => {
+    clearTimer();
+  })
+}
 
 function updateTime() {
   // time is going to be an object, made of 4 properties.
@@ -126,3 +166,5 @@ function updateTime() {
     3 different times to put in the timer in exact order, then the text will show up!
 
 */
+
+// timer-button-config.js below

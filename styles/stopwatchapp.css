@@ -116,6 +116,8 @@ body {
 .prompt {
   font-size: 20px;
   text-decoration: underline;
+  position: absolute;
+  top: 5px;
 }
 
 .tm,
