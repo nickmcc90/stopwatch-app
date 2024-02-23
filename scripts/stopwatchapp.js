@@ -84,9 +84,11 @@ function reset() {
   localStorage.removeItem('time');        // this needs to be the last line.
   updateTime();
   console.log(time);    // debugger
+  document.querySelector('.js-timer-spawn').innerHTML = '';
 }
 
 function timerScreenSelect() {
+  document.querySelector('.js-timer-spawn').innerHTML = '';   //gets rid of timer button after pressing timer.
   const selectScreenElement = document.querySelector('.js-fixed-timer-select');
   let htmlSelectScreen = `
   <div class='darkened-screen'>

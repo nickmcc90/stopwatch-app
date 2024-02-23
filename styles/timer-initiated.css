@@ -1,3 +1,12 @@
 .start-timer-button {
   position: absolute;
+  top: 30%;
+  right: 22%;
+  color: white;
+  background-color: rgb(39, 39, 39);
+  border: 3px solid white;
+  padding: 20px;
+  border-radius: 5px;
+  height: 69px;
+  font-size: 17px;
 }
