@@ -86,6 +86,7 @@ function timerFinallyStart() {
   } else {
     isButtonOn = false;
     clearInterval(timerId);
+    console.log('wahtup');
   }
 
 }
@@ -93,10 +94,14 @@ function timerFinallyStart() {
 
 function correctTime2() {
   const startTimerButton = document.querySelector('.start-timer-button');
-  if(startTimerButton.innerHTML === 'Start Timer') {
+  if(!startTimerButton) {
+    console.log("She's nullin");
+  } else if(startTimerButton.innerHTML === 'Start Timer') {
     startTimerButton.innerHTML = 'Stop Timer';
-  } else {
+  } else if(startTimerButton.innerHTML === 'Stop Timer') {
     startTimerButton.innerHTML = 'Start Timer';
+  } else {
+    
   }
 }
 
@@ -106,6 +111,22 @@ function timerAlgorithm() {
   if(timerTime.ones === -1) {
     timerTime.twos--;
     timerTime.ones = 9;
+  }
+  if(timerTime.twos === -1) {
+    timerTime.threes--;
+    timerTime.twos = 5;
+  }
+  if(timerTime.threes === -1) {
+    timerTime.fours--;
+    timerTime.threes = 9;
+  }
+  if(timerTime.fours === -1) {
+    timerFinallyStart(); // this ends the timer.
+    timerTime.ones = 0;
+    timerTime.twos = 0;
+    timerTime.threes = 0;
+    timerTime.fours = 0;
+    reset();        // this should only occur once everything hits zero.
   }
 
   
@@ -118,4 +139,11 @@ function updateTimer() {
   document.querySelector('.js-tens-seconds').innerHTML = timerTime.twos;
   document.querySelector('.js-ones-minutes').innerHTML = timerTime.threes;
   document.querySelector('.js-tens-minutes').innerHTML = timerTime.fours;
+}
+
+function cancelOutTimerTime () {
+  timerTime.ones = 0;
+  timerTime.twos = 0;
+  timerTime.threes = 0;
+  timerTime.fours = 0;
 }

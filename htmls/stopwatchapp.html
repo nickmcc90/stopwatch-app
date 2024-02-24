@@ -60,3 +60,26 @@ Finally, having the timer start button disappear when we press reset or the time
 -->
 
 <!--We are in the middle of working on the timer algorithm function.-->
+
+
+<!-- This is my first Javascript project! I stopped working on it 2/23/24. I was only
+supposed to make a stopwatch, but I tried to implement a timer as well. That works well,
+but there are some bugs because if you do something wacky like start the stopwatch 
+to start counting up, then set a timer and make it count down. Both the stopwatch
+and timer make the values of the clock bug out. This is probably easily fixable,
+but I just spent the last few days fixing some bugs and I'm honestly tired of this
+project. I learned a lot about debugging things, as well as implementing the JS I learned
+as well as html and css. Maybe I'll come back to this project and add the secret layouts I've
+wanted to add. I added another comment under this one which details my findings with a 
+bug I was trying to fix, but it worked itself out miraculously.-->
+
+
+<!-- Crazy thing with hitting reset while the timer is still counting down tidbit: We hit
+reset, and the values of timerTime all equal zero, but the timerAlgorithm inside
+of timerFinallyStart is still running because we never gave it the clearInterval
+id. So, the timerAlgorithm runs again, with the starting values of the timer all
+equalling zero. In the timerAlgorithm, when all the values equal zero, it runs
+an if statement that runs the timerFinallyStart function which turns off
+the setInterval and timerAlgorithm, and it runs a reset which finally 
+makes all the values zero and finishes everything. This bug worked itself
+out, based on the code I randomly wrote. -->

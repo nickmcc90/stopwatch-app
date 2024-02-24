@@ -85,6 +85,7 @@ function reset() {
   updateTime();
   console.log(time);    // debugger
   document.querySelector('.js-timer-spawn').innerHTML = '';
+  cancelOutTimerTime();       // If the reset button is pressed while the timer is going, it gets rid of the timer variables from running too.
 }
 
 function timerScreenSelect() {
@@ -93,7 +94,7 @@ function timerScreenSelect() {
   let htmlSelectScreen = `
   <div class='darkened-screen'>
     <div class='item-screen'>
-      <div class='prompt'>Select timer amount (under one hour, this is a beta)</div>
+      <div class='prompt'>Select timer amount (under 99 minutes, this is a beta)</div>
       <div class="timer-container">
         <div class="timer-screen-top">
           <div class="js-tensmins">0</div>
@@ -148,6 +149,7 @@ function updateTime() {
   document.querySelector('.js-ones-minutes').innerHTML = time.onesMinutes;
   document.querySelector('.js-tens-seconds').innerHTML = time.tensSeconds;
   document.querySelector('.js-ones-seconds').innerHTML = time.onesSeconds;
+  console.log(time.tensMinutes);
 }
 
 /* secret layout change code prep...
